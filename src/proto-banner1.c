@@ -17,7 +17,6 @@
 #include "proto-imap4.h"
 #include "proto-pop3.h"
 #include "proto-vnc.h"
-#include "proto-sip.h"
 #include "proto-memcached.h"
 #include "masscan-app.h"
 #include "scripting.h"
@@ -759,7 +758,6 @@ banner1_create(void)
     banner_telnet.init(b);
     banner_rdp.init(b);
     banner_vnc.init(b);
-    banner_sip.init(b);
     
     /* scripting/versioning come after the rest */
     banner_scripting.init(b);
