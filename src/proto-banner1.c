@@ -389,1022 +389,157 @@ struct ProtocolParserStream banner_ldap = {
 static const char
 sip_hello[] = "OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n";
 
-struct ProtocolParserStream banner_sip_6069 = {
-    "banner-SIPOptions", 6069, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5060 = {
+struct ProtocolParserStream banner_sip = {
     "banner-SIPOptions", 5060, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6072 = {
-    "banner-SIPOptions", 6072, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5038 = {
-    "banner-SIPOptions", 5038, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_7777 = {
-    "banner-SIPOptions", 7777, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5001 = {
-    "banner-SIPOptions", 5001, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3030 = {
-    "banner-SIPOptions", 3030, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6036 = {
-    "banner-SIPOptions", 6036, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5061 = {
-    "banner-SIPOptions", 5061, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1025 = {
-    "banner-SIPOptions", 1025, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6060 = {
-    "banner-SIPOptions", 6060, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3075 = {
-    "banner-SIPOptions", 3075, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6073 = {
-    "banner-SIPOptions", 6073, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_7073 = {
-    "banner-SIPOptions", 7073, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6079 = {
-    "banner-SIPOptions", 6079, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6099 = {
-    "banner-SIPOptions", 6099, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6089 = {
-    "banner-SIPOptions", 6089, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5059 = {
-    "banner-SIPOptions", 5059, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5260 = {
-    "banner-SIPOptions", 5260, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5070 = {
-    "banner-SIPOptions", 5070, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5069 = {
-    "banner-SIPOptions", 5069, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6655 = {
-    "banner-SIPOptions", 6655, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5080 = {
-    "banner-SIPOptions", 5080, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5062 = {
     "banner-SIPOptions", 5062, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_15060 = {
+    "banner-SIPOptions", 5066, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6069, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6072, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5038, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 7777, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5001, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 3030, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6036, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5061, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 1025, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6060, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 3075, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6073, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 7073, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6079, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6099, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6089, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5059, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5260, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5070, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5069, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 6655, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5080, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 5062, sip_hello, sizeof(sip_hello) - 1, 0,
     "banner-SIPOptions", 15060, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6050 = {
     "banner-SIPOptions", 6050, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6051 = {
     "banner-SIPOptions", 6051, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5063 = {
     "banner-SIPOptions", 5063, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5064 = {
     "banner-SIPOptions", 5064, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5065 = {
     "banner-SIPOptions", 5065, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5067 = {
     "banner-SIPOptions", 5067, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5068 = {
     "banner-SIPOptions", 5068, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5071 = {
     "banner-SIPOptions", 5071, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5072 = {
     "banner-SIPOptions", 5072, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5073 = {
     "banner-SIPOptions", 5073, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5076 = {
     "banner-SIPOptions", 5076, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5075 = {
     "banner-SIPOptions", 5075, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5077 = {
     "banner-SIPOptions", 5077, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5078 = {
     "banner-SIPOptions", 5078, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1020 = {
     "banner-SIPOptions", 1020, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5079 = {
     "banner-SIPOptions", 5079, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1021 = {
     "banner-SIPOptions", 1021, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1022 = {
     "banner-SIPOptions", 1022, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1023 = {
     "banner-SIPOptions", 1023, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6052 = {
     "banner-SIPOptions", 6052, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6053 = {
     "banner-SIPOptions", 6053, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6054 = {
     "banner-SIPOptions", 6054, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6055 = {
     "banner-SIPOptions", 6055, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6057 = {
     "banner-SIPOptions", 6057, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6058 = {
     "banner-SIPOptions", 6058, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6059 = {
     "banner-SIPOptions", 6059, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6061 = {
     "banner-SIPOptions", 6061, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6062 = {
     "banner-SIPOptions", 6062, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6063 = {
     "banner-SIPOptions", 6063, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6070 = {
     "banner-SIPOptions", 6070, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6064 = {
     "banner-SIPOptions", 6064, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6080 = {
     "banner-SIPOptions", 6080, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6010 = {
     "banner-SIPOptions", 6010, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5090 = {
     "banner-SIPOptions", 5090, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5566 = {
     "banner-SIPOptions", 5566, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9060 = {
     "banner-SIPOptions", 9060, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_4002 = {
     "banner-SIPOptions", 4002, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5678 = {
     "banner-SIPOptions", 5678, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5088 = {
     "banner-SIPOptions", 5088, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6020 = {
     "banner-SIPOptions", 6020, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5600 = {
     "banner-SIPOptions", 5600, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5160 = {
     "banner-SIPOptions", 5160, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9090 = {
     "banner-SIPOptions", 9090, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5506 = {
     "banner-SIPOptions", 5506, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5000 = {
     "banner-SIPOptions", 5000, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5002 = {
     "banner-SIPOptions", 5002, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5098 = {
     "banner-SIPOptions", 5098, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5099 = {
     "banner-SIPOptions", 5099, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5100 = {
     "banner-SIPOptions", 5100, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6088 = {
     "banner-SIPOptions", 6088, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6090 = {
     "banner-SIPOptions", 6090, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_14310 = {
     "banner-SIPOptions", 14310, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1153 = {
     "banner-SIPOptions", 1153, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10243 = {
     "banner-SIPOptions", 10243, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_4569 = {
     "banner-SIPOptions", 4569, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8080 = {
     "banner-SIPOptions", 8080, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5723 = {
     "banner-SIPOptions", 5723, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1024 = {
     "banner-SIPOptions", 1024, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1026 = {
     "banner-SIPOptions", 1026, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1029 = {
     "banner-SIPOptions", 1029, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1030 = {
     "banner-SIPOptions", 1030, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10000 = {
     "banner-SIPOptions", 10000, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10001 = {
     "banner-SIPOptions", 10001, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10002 = {
     "banner-SIPOptions", 10002, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10009 = {
     "banner-SIPOptions", 10009, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10010 = {
     "banner-SIPOptions", 10010, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_7060 = {
     "banner-SIPOptions", 7060, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8060 = {
     "banner-SIPOptions", 8060, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_7061 = {
     "banner-SIPOptions", 7061, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8061 = {
     "banner-SIPOptions", 8061, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9061 = {
     "banner-SIPOptions", 9061, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_2000 = {
     "banner-SIPOptions", 2000, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_2001 = {
     "banner-SIPOptions", 2001, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_2002 = {
     "banner-SIPOptions", 2002, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_2020 = {
     "banner-SIPOptions", 2020, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_2021 = {
     "banner-SIPOptions", 2021, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3478 = {
     "banner-SIPOptions", 3478, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_13000 = {
     "banner-SIPOptions", 13000, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_13001 = {
     "banner-SIPOptions", 13001, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_4379 = {
     "banner-SIPOptions", 4379, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_4380 = {
     "banner-SIPOptions", 4380, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_27000 = {
     "banner-SIPOptions", 27000, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_27001 = {
     "banner-SIPOptions", 27001, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_27030 = {
     "banner-SIPOptions", 27030, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_27031 = {
     "banner-SIPOptions", 27031, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_27036 = {
     "banner-SIPOptions", 27036, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_16384 = {
     "banner-SIPOptions", 16384, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_16385 = {
     "banner-SIPOptions", 16385, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_16399 = {
     "banner-SIPOptions", 16399, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_16400 = {
     "banner-SIPOptions", 16400, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9000 = {
     "banner-SIPOptions", 9000, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9001 = {
     "banner-SIPOptions", 9001, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9002 = {
     "banner-SIPOptions", 9002, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9049 = {
     "banner-SIPOptions", 9049, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_9050 = {
     "banner-SIPOptions", 9050, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3722 = {
     "banner-SIPOptions", 3722, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3723 = {
     "banner-SIPOptions", 3723, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3729 = {
     "banner-SIPOptions", 3729, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3730 = {
     "banner-SIPOptions", 3730, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1234 = {
     "banner-SIPOptions", 1234, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1235 = {
     "banner-SIPOptions", 1235, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1236 = {
     "banner-SIPOptions", 1236, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1237 = {
     "banner-SIPOptions", 1237, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5009 = {
     "banner-SIPOptions", 5009, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5190 = {
     "banner-SIPOptions", 5190, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5297 = {
     "banner-SIPOptions", 5297, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_5353 = {
     "banner-SIPOptions", 5353, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6802 = {
     "banner-SIPOptions", 6802, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10602 = {
     "banner-SIPOptions", 10602, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_10600 = {
     "banner-SIPOptions", 10600, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_6250 = {
     "banner-SIPOptions", 6250, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_1720 = {
     "banner-SIPOptions", 1720, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3230 = {
     "banner-SIPOptions", 3230, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3231 = {
     "banner-SIPOptions", 3231, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_3237 = {
     "banner-SIPOptions", 3237, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8000 = {
     "banner-SIPOptions", 8000, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8001 = {
     "banner-SIPOptions", 8001, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8002 = {
     "banner-SIPOptions", 8002, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8003 = {
     "banner-SIPOptions", 8003, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8004 = {
     "banner-SIPOptions", 8004, sip_hello, sizeof(sip_hello) - 1, 0,
-    NULL,
-    NULL,
-    NULL,
-};
-
-struct ProtocolParserStream banner_sip_8005 = {
+    "banner-SIPOptions", 406, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 8081, sip_hello, sizeof(sip_hello) - 1, 0,
+    "banner-SIPOptions", 31337, sip_hello, sizeof(sip_hello) - 1, 0,
     "banner-SIPOptions", 8005, sip_hello, sizeof(sip_hello) - 1, 0,
     NULL,
     NULL,
@@ -1578,6 +713,9 @@ banner1_create(void)
     b->payloads.tcp[11712] = (void*)&banner_ssl;
     b->payloads.tcp[406] = (void*)&banner_sip;
     b->payloads.tcp[5060] = (void*)&banner_sip;
+    b->payloads.tcp[8081] = (void*)&banner_sip;
+    b->payloads.tcp[31337] = (void*)&banner_sip;
+    b->payloads.tcp[406] = (void*)&banner_sip;
     b->payloads.tcp[8081] = (void*)&banner_sip;
     b->payloads.tcp[31337] = (void*)&banner_sip;
     b->payloads.tcp[6069] = (void*)&banner_sip;
